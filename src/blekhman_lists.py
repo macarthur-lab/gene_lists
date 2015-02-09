@@ -1,7 +1,6 @@
 #!/broad/software/free/Linux/redhat_5_x86_64/pkgs/python_2.7.1-sqlite3-rtrees/bin/python
 
 from gene_list_utils import *
-import re
 
 '''
 Parses the gene list from the Supplementary Materials of Blekhman et al, 2008 into a dict
