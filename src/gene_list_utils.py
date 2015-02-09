@@ -15,13 +15,22 @@ def print_dict(a_dictionary,dest=sys.stdout):
         dest.write((key + "\t" + ("" if a_dictionary[key] is None else a_dictionary[key]) + "\n").encode('utf8'))
 
 '''
-Prints unique values from a dictionary, each only once.
+Prints unique values from a dictionary, alphabetically, each only once.
 '''
 def print_values(a_dictionary,dest=sys.stdout):
     unique_values = sorted(set(a_dictionary.values()))
     for unique_value in unique_values:
         if unique_value is not None:
             dest.write((unique_value + "\n").encode('utf8'))
+
+'''
+Prints unique values from a list, alphabetically, each only once.
+'''
+def print_list(a_list,dest=sys.stdout):
+    unique_values = sorted(set(a_list))
+    for unique_value in unique_values:
+        if unique_value is not None:
+            dest.write((unique_value + "\n").encode('utf8')) 
 
 '''
 Parse the HGNC database to get current gene symbol for all 19,000 genes with protein products
