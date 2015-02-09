@@ -33,6 +33,25 @@ def print_list(a_list,dest=sys.stdout):
             dest.write((unique_value + "\n").encode('utf8')) 
 
 '''
+Takes a dictionary in which gene symbols are keys and dictionaries
+of info about each gene are the values. 
+Returns a list of genes meeting filters specified in the dictionary
+called "filters". For instance, for the Blekhman 2008 dataset, 
+get_genes(blekhman,{'ModeInher': 'AD'}) returns only autosomal dominant genes.
+'''
+def get_genes(gene_dict,filters):
+    genes = []
+    for gene in gene_dict.keys():
+        include = True
+        for filterkey in filters.keys():
+            if gene_dict[gene][filterkey] != filters[filterkey]:
+                include = False
+                break
+        if include:
+            genes.append(gene)
+    return genes
+
+'''
 Parse the HGNC database to get current gene symbol for all 19,000 genes with protein products
 Suggested input:
     wget ftp://ftp.ebi.ac.uk/pub/databases/genenames/locus_types/gene_with_protein_product.txt.gz
