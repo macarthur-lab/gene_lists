@@ -77,7 +77,7 @@ def parse_drugbank(drugbank_path,hgnc,debug=False):
     return drug_gene
 
 if __name__ == '__main__':
-    hgnc = parse_hgnc("gene_with_protein_product.txt")
+    hgnc = parse_hgnc("gene_with_protein_product.txt",mode='id')
     drug_gene = parse_drugbank("drugbank.xml",hgnc,debug=False)
     with open('other_data/drug_gene_match.tsv',mode='w') as f:
         print_dict(drug_gene,f)
