@@ -18,6 +18,8 @@ Here is a guide to the lists we currently have in this repo:
 | [All dominant genes](lists/all_ad.tsv) | 709 | Currently the union of the Berg and Blekhman dominant lists, may add more lists later. | [[Blekhman 2008], [Berg 2013]] |
 | [All recessive genes](lists/all_ar.tsv) | 1183 | Currently the union of the Berg and Blekhman recessive lists, may add more lists later. | [[Blekhman 2008], [Berg 2013]] |
 
+We welcome pull requests for adding additional lists, provided they are licensed for redistribution. If possible, please provide the source code used to extract the list from its original source, and an appropriate description for this readme.
+
 [Law 2014]: http://www.ncbi.nlm.nih.gov/pubmed/24203711 "Law V, Knox C, Djoumbou Y, Jewison T, Guo AC, Liu Y, Maciejewski A, Arndt D, Wilson M, Neveu V, Tang A, Gabriel G, Ly C, Adamjee S, Dame ZT, Han B, Zhou Y, Wishart DS. DrugBank 4.0: shedding new light on drug metabolism. Nucleic Acids Res. 2014 Jan;42(Database issue):D1091-7. doi: 10.1093/nar/gkt1068. Epub 2013 Nov 6. PubMed PMID: 24203711; PubMed Central PMCID: PMC3965102."
 
 [Knox 2011]: http://www.ncbi.nlm.nih.gov/pubmed/21059682 "Knox C, Law V, Jewison T, Liu P, Ly S, Frolkis A, Pon A, Banco K, Mak C, Neveu V, Djoumbou Y, Eisner R, Guo AC, Wishart DS. DrugBank 3.0: a comprehensive resource for 'omics' research on drugs. Nucleic Acids Res. 2011 Jan;39(Database issue):D1035-41. doi: 10.1093/nar/gkq1126. Epub 2010 Nov 8. PubMed PMID: 21059682; PubMed Central PMCID: PMC3013709."
