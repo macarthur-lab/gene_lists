@@ -80,6 +80,7 @@ if __name__ == '__main__':
     hgnc = parse_hgnc("gene_with_protein_product.txt",mode='id')
     drug_gene = parse_drugbank("drugbank.xml",hgnc,debug=False)
     with open('other_data/drug_gene_match.tsv',mode='w') as f:
+        f.write("drug\tgene\n")
         print_dict(drug_gene,f)
     with open('lists/fda_approved_drug_targets.tsv',mode='w') as f:
         print_values(drug_gene,f)
