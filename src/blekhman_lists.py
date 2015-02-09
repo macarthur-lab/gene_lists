@@ -23,8 +23,6 @@ def parse_blekhman(table_path,hgnc):
         colnames = f.readline().strip().split("\t")
         for line in f.readlines():
             gene_data = dict(zip(colnames,line.strip().split("\t")))
-            # make sure we use the current gene symbol.
-            # note this is incredibly inefficient right now but for 19K genes it is fast enough
             gene_symbol_as_of_2008 = gene_data['HUGO']
             # try to find an updated symbol
             if hgnc.has_key(gene_symbol_as_of_2008):
