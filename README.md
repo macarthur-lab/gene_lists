@@ -6,9 +6,17 @@ Here is a guide to the lists we currently have in this repo:
 
 | List | Description | Please cite |
 | ---- | ---- | ---- |
-| [Universe](lists/universe.tsv) | All protein-coding genes according to HGNC as of Feb 9, 2015. For details see [src/create_universe.bash](src/create_universe.bash). This list is the "universe" of which all subsequent lists are subsets. | See [genenames.org/about/overview](http://www.genenames.org/about/overview). Users are asked to web reference "HUGO Gene Nomenclature Committee at the European Bioinformatics Institute" (http://www.genenames.org/) if possible. |
-| FDA-approved drug targets | Genes whose protein products are known to be the mechanistic targets of FDA-approved drugs. For details on exact criteria used, see [src/drug_targets.py] | See [drugbank.ca/about](http://www.drugbank.ca/about). Please cite [[Law 2014], [Knox 2011], [Wishart 2008] and/or [Wishart 2006]]. | 
-
+| [Universe](lists/universe.tsv) | Approved symbols for 18,991 protein-coding genes according to HGNC as of Feb 9, 2015. For details see [src/create_universe.bash](src/create_universe.bash). This list is the "universe" of which all subsequent lists are subsets. | See [genenames.org/about/overview](http://www.genenames.org/about/overview). Users are asked to web reference "HUGO Gene Nomenclature Committee at the European Bioinformatics Institute" (http://www.genenames.org/) if possible. |
+| [FDA-approved drug targets](lists/fda_approved_drug_targets.tsv) | Genes whose protein products are known to be the mechanistic targets of FDA-approved drugs. For details on the exact criteria we used for inclusion in this list, see [src/drug_targets.py](src/drug_targets.py) | See [drugbank.ca/about](http://www.drugbank.ca/about). Please cite [[Law 2014], [Knox 2011], [Wishart 2008] and/or [Wishart 2006]]. | 
+| [Autosomal dominant genes by Blekhman et al 2008](lists/blekhman_ad.tsv) | OMIM disease genes deemed to follow autosomal dominant inheritance according to extensive manual curation by Molly Przeworski's group. | [[Blekhman 2008]] |
+| [Autosomal dominant genes by Berg et al 2013](lists/berg_ad.tsv) | OMIM disease genes (as of June 2011) deemed to follow autosomal dominant inheritance according Berg et al, 2013. | [[Berg 2013]] |
+| [Autosomal recessive genes by Blekhman et al 2008](lists/blekhman_ar.tsv) | OMIM disease genes deemed to follow autosomal recessive inheritance according to extensive manual curation by Molly Przeworski's group. | [[Blekhman 2008]] |
+| [Autosomal recessive genes by Berg et al 2013](lists/berg_ar.tsv) | OMIM disease genes (as of June 2011) deemed to follow autosomal recessive inheritance according Berg et al, 2013. | [[Berg 2013]] |
+| [X-linked genes by Blekhman et al 2008](lists/blekhman_x.tsv) | OMIM disease genes deemed to follow X-linked inheritance (dominant/recessive not specified) according to extensive manual curation by Molly Przeworski's group. | [[Blekhman 2008]] |
+| [X-linked recessive genes by Berg et al 2013](lists/berg_xr.tsv) | OMIM disease genes (as of June 2011) deemed to follow X-linked recessive inheritance according Berg et al, 2013. | [[Berg 2013]] |
+| [X-linked dominant genes by Berg et al 2013](lists/berg_xd.tsv) | OMIM disease genes (as of June 2011) deemed to follow X-linked dominant inheritance according Berg et al, 2013. | [[Berg 2013]] |
+| [All dominant genes](lists/all_ad.tsv) | Currently the union of the Berg and Blekhman dominant lists, may add more lists later. | [[Blekhman 2008], [Berg 2013]] |
+| [All recessive genes](lists/all_ar.tsv) | Currently the union of the Berg and Blekhman recessive lists, may add more lists later. | [[Blekhman 2008], [Berg 2013]] |
 
 [Law 2014]: http://www.ncbi.nlm.nih.gov/pubmed/24203711 "Law V, Knox C, Djoumbou Y, Jewison T, Guo AC, Liu Y, Maciejewski A, Arndt D, Wilson M, Neveu V, Tang A, Gabriel G, Ly C, Adamjee S, Dame ZT, Han B, Zhou Y, Wishart DS. DrugBank 4.0: shedding new light on drug metabolism. Nucleic Acids Res. 2014 Jan;42(Database issue):D1091-7. doi: 10.1093/nar/gkt1068. Epub 2013 Nov 6. PubMed PMID: 24203711; PubMed Central PMCID: PMC3965102."
 
@@ -17,3 +25,8 @@ Here is a guide to the lists we currently have in this repo:
 [Wishart 2008]: http://www.ncbi.nlm.nih.gov/pubmed/18048412 "Wishart DS, Knox C, Guo AC, Cheng D, Shrivastava S, Tzur D, Gautam B, Hassanali M. DrugBank: a knowledgebase for drugs, drug actions and drug targets.  Nucleic Acids Res. 2008 Jan;36(Database issue):D901-6. Epub 2007 Nov 29. PubMed PMID: 18048412; PubMed Central PMCID: PMC2238889."
 
 [Wishart 2006]: http://www.ncbi.nlm.nih.gov/pubmed/16381955 "Wishart DS, Knox C, Guo AC, Shrivastava S, Hassanali M, Stothard P, Chang Z, Woolsey J. DrugBank: a comprehensive resource for in silico drug discovery and exploration. Nucleic Acids Res. 2006 Jan 1;34(Database issue):D668-72. PubMed PMID: 16381955; PubMed Central PMCID: PMC1347430."
+
+[Blekhman 2008]: http://www.ncbi.nlm.nih.gov/pubmed/18571414 "Blekhman R, Man O, Herrmann L, Boyko AR, Indap A, Kosiol C, Bustamante CD, Teshima KM, Przeworski M. Natural selection on genes that underlie human disease  susceptibility. Curr Biol. 2008 Jun 24;18(12):883-9. doi: 10.1016/j.cub.2008.04.074. PubMed PMID: 18571414; PubMed Central PMCID: PMC2474766."
+
+[Berg 2013]: http://www.ncbi.nlm.nih.gov/pubmed/22995991 "Berg JS, Adams M, Nassar N, Bizon C, Lee K, Schmitt CP, Wilhelmsen KC, Evans JP. An informatics approach to analyzing the incidentalome. Genet Med. 2013 Jan;15(1):36-44. doi: 10.1038/gim.2012.112. Epub 2012 Sep 20. PubMed PMID: 22995991; PubMed Central PMCID: PMC3538953."
+
