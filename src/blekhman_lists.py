@@ -33,25 +33,6 @@ def parse_blekhman(table_path,hgnc):
             genes[current_symbol] = gene_data
     return genes
 
-'''
-Takes a dictionary from the above function and returns a list of genes
-meeting filters specified in the dictionary, filters. In that dictionary,
-every key should be a column from the supplement, and every value
-should be a value that column has to be equal to, e.g.
-{'ModeInher': 'AD'} returns only autosomal dominant genes.
-'''
-def get_genes(blekhman,filters):
-    genes = []
-    for gene in blekhman.keys():
-        include = True
-        for filterkey in filters.keys():
-            if blekhman[gene][filterkey] != filters[filterkey]:
-                include = False
-                break
-        if include:
-            genes.append(gene)
-    return genes
-
 if __name__ == '__main__':
     hgnc = parse_hgnc("gene_with_protein_product.txt",mode='update')
     blekhman = parse_blekhman('blekhman_supplement_02.txt',hgnc)
