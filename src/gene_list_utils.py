@@ -29,14 +29,25 @@ Suggested input:
     wget ftp://ftp.ebi.ac.uk/pub/databases/genenames/locus_types/gene_with_protein_product.txt.gz
     gunzip gene_with_protein_product.txt.gz
 Note for some reason the file from EBI seems to be unreadable by zcat but can still be gunzipped. Not sure why.
-Returns: a dictonary mapping HGNC ids (e.g. "HGNC:5") to HGNC info, such as approved gene symbol (e.g. "A1BG")
+Behavior depends on mode.
+If mode = 'id', returns a dictonary mapping HGNC ids (e.g. "HGNC:5") to all HGNC info, including approved gene symbol (e.g. "A1BG")
+If mode = 'update', returns a dictionary mapping any previous symbols or synonyms (e.g. "ACF") to current approved HGNC symbol (e.g. "AC1F")
 '''
-def parse_hgnc(hgnc_path):
+def parse_hgnc(hgnc_path, mode='id'):
     hgnc = {}
     with open(hgnc_path) as hgnc_file:
         header = hgnc_file.readline()
         colnames = header.strip().split('\t')
         for line in hgnc_file.readlines():
-            hgnc_id = line.split('\t')[0]
-            hgnc[hgnc_id] = dict(zip(colnames,line.strip().split('\t')))
+            cols = line.split('\t')
+            if mode == 'id':
+                hgnc_id = cols[colnames.index('HGNC ID')]
+                hgnc[hgnc_id] = dict(zip(colnames,line.split('\t')))
+            if mode == 'update':
+                all_possible_names_and_symbols = map(str.strip,cols[colnames.index('Previous Symbols')].split(',') + 
+                    cols[colnames.index('Approved Symbol')].split(',') + 
+                    cols[colnames.index('Synonyms')].split(','))
+                for symbol in all_possible_names_and_symbols:
+                    if symbol != '': # skip blanks
+                        hgnc[symbol] = cols[colnames.index('Approved Symbol')]
     return hgnc
