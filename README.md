@@ -4,19 +4,19 @@ Often in bioinformatics we want a list of genes so that we can ask, "are genes i
 
 Here is a guide to the lists we currently have in this repo:
 
-| List | Description | Please cite |
-| ---- | ---- | ---- |
-| [Universe](lists/universe.tsv) | Approved symbols for 18,991 protein-coding genes according to HGNC as of Feb 9, 2015. For details see [src/create_universe.bash](src/create_universe.bash). This list is the "universe" of which all subsequent lists are subsets. | See [genenames.org/about/overview](http://www.genenames.org/about/overview). Users are asked to web reference "HUGO Gene Nomenclature Committee at the European Bioinformatics Institute" (http://www.genenames.org/) if possible. |
-| [FDA-approved drug targets](lists/fda_approved_drug_targets.tsv) | Genes whose protein products are known to be the mechanistic targets of FDA-approved drugs. For details on the exact criteria we used for inclusion in this list, see [src/drug_targets.py](src/drug_targets.py) | See [drugbank.ca/about](http://www.drugbank.ca/about). Please cite [[Law 2014], [Knox 2011], [Wishart 2008] and/or [Wishart 2006]]. | 
-| [Autosomal dominant genes by Blekhman et al 2008](lists/blekhman_ad.tsv) | OMIM disease genes deemed to follow autosomal dominant inheritance according to extensive manual curation by Molly Przeworski's group. | [[Blekhman 2008]] |
-| [Autosomal dominant genes by Berg et al 2013](lists/berg_ad.tsv) | OMIM disease genes (as of June 2011) deemed to follow autosomal dominant inheritance according Berg et al, 2013. | [[Berg 2013]] |
-| [Autosomal recessive genes by Blekhman et al 2008](lists/blekhman_ar.tsv) | OMIM disease genes deemed to follow autosomal recessive inheritance according to extensive manual curation by Molly Przeworski's group. | [[Blekhman 2008]] |
-| [Autosomal recessive genes by Berg et al 2013](lists/berg_ar.tsv) | OMIM disease genes (as of June 2011) deemed to follow autosomal recessive inheritance according Berg et al, 2013. | [[Berg 2013]] |
-| [X-linked genes by Blekhman et al 2008](lists/blekhman_x.tsv) | OMIM disease genes deemed to follow X-linked inheritance (dominant/recessive not specified) according to extensive manual curation by Molly Przeworski's group. | [[Blekhman 2008]] |
-| [X-linked recessive genes by Berg et al 2013](lists/berg_xr.tsv) | OMIM disease genes (as of June 2011) deemed to follow X-linked recessive inheritance according Berg et al, 2013. | [[Berg 2013]] |
-| [X-linked dominant genes by Berg et al 2013](lists/berg_xd.tsv) | OMIM disease genes (as of June 2011) deemed to follow X-linked dominant inheritance according Berg et al, 2013. | [[Berg 2013]] |
-| [All dominant genes](lists/all_ad.tsv) | Currently the union of the Berg and Blekhman dominant lists, may add more lists later. | [[Blekhman 2008], [Berg 2013]] |
-| [All recessive genes](lists/all_ar.tsv) | Currently the union of the Berg and Blekhman recessive lists, may add more lists later. | [[Blekhman 2008], [Berg 2013]] |
+| List | Count | Description | Please cite |
+| ---- | ---- | ---- | ---- |
+| [Universe](lists/universe.tsv) | 18,991 | Approved symbols for 18,991 protein-coding genes according to HGNC as of Feb 9, 2015. For details see [src/create_universe.bash](src/create_universe.bash). This list is the "universe" of which all subsequent lists are subsets. | See [genenames.org/about/overview](http://www.genenames.org/about/overview). Users are asked to web reference "HUGO Gene Nomenclature Committee at the European Bioinformatics Institute" (http://www.genenames.org/) if possible. |
+| [FDA-approved drug targets](lists/fda_approved_drug_targets.tsv) | 286 | Genes whose protein products are known to be the mechanistic targets of FDA-approved drugs. For details on the exact criteria we used for inclusion in this list, see [src/drug_targets.py](src/drug_targets.py) | See [drugbank.ca/about](http://www.drugbank.ca/about). Please cite [[Law 2014], [Knox 2011], [Wishart 2008] and/or [Wishart 2006]]. | 
+| [Autosomal dominant genes by Blekhman et al 2008](lists/blekhman_ad.tsv) | 307 | OMIM disease genes deemed to follow autosomal dominant inheritance according to extensive manual curation by Molly Przeworski's group. | [[Blekhman 2008]] |
+| [Autosomal dominant genes by Berg et al 2013](lists/berg_ad.tsv) | 631 | OMIM disease genes (as of June 2011) deemed to follow autosomal dominant inheritance according Berg et al, 2013. | [[Berg 2013]] |
+| [Autosomal recessive genes by Blekhman et al 2008](lists/blekhman_ar.tsv) | 529 | OMIM disease genes deemed to follow autosomal recessive inheritance according to extensive manual curation by Molly Przeworski's group. | [[Blekhman 2008]] |
+| [Autosomal recessive genes by Berg et al 2013](lists/berg_ar.tsv) | 1073 | OMIM disease genes (as of June 2011) deemed to follow autosomal recessive inheritance according Berg et al, 2013. | [[Berg 2013]] |
+| [X-linked genes by Blekhman et al 2008](lists/blekhman_x.tsv) | 66 | OMIM disease genes deemed to follow X-linked inheritance (dominant/recessive not specified) according to extensive manual curation by Molly Przeworski's group. | [[Blekhman 2008]] |
+| [X-linked recessive genes by Berg et al 2013](lists/berg_xr.tsv) | 102 | OMIM disease genes (as of June 2011) deemed to follow X-linked recessive inheritance according Berg et al, 2013. | [[Berg 2013]] |
+| [X-linked dominant genes by Berg et al 2013](lists/berg_xd.tsv) | 34 | OMIM disease genes (as of June 2011) deemed to follow X-linked dominant inheritance according Berg et al, 2013. | [[Berg 2013]] |
+| [All dominant genes](lists/all_ad.tsv) | 709 | Currently the union of the Berg and Blekhman dominant lists, may add more lists later. | [[Blekhman 2008], [Berg 2013]] |
+| [All recessive genes](lists/all_ar.tsv) | 1183 | Currently the union of the Berg and Blekhman recessive lists, may add more lists later. | [[Blekhman 2008], [Berg 2013]] |
 
 [Law 2014]: http://www.ncbi.nlm.nih.gov/pubmed/24203711 "Law V, Knox C, Djoumbou Y, Jewison T, Guo AC, Liu Y, Maciejewski A, Arndt D, Wilson M, Neveu V, Tang A, Gabriel G, Ly C, Adamjee S, Dame ZT, Han B, Zhou Y, Wishart DS. DrugBank 4.0: shedding new light on drug metabolism. Nucleic Acids Res. 2014 Jan;42(Database issue):D1091-7. doi: 10.1093/nar/gkt1068. Epub 2013 Nov 6. PubMed PMID: 24203711; PubMed Central PMCID: PMC3965102."
 
