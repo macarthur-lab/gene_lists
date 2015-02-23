@@ -19,6 +19,7 @@ Here is a guide to the lists we currently have in this repo:
 | [All dominant genes](lists/all_ad.tsv) | 709 | Currently the union of the Berg and Blekhman dominant lists, may add more lists later. | [[Blekhman 2008], [Berg 2013]] |
 | [All recessive genes](lists/all_ar.tsv) | 1183 | Currently the union of the Berg and Blekhman recessive lists, may add more lists later. | [[Blekhman 2008], [Berg 2013]] |
 | [Essential in culture](lists/core_essentials_hart.tsv) | 285 | Genes deemed essential in multiple cultured cell lines based on shRNA screen data | [[Hart 2014]] |
+| [Essential in mice](lists/mgi_essential.tsv) | 2,454 | Genes where homozygous knockout in mice results in pre-, peri- or post-natal lethality. The mouse phenotypes were reported by Jackson Labs [[Blake 2011]], then essential gene list was extracted via manual review of phenotypes by [[Georgi 2013]], and the essential/non-essential flag was put into dbNSFP [[Liu 2013]]. We extracted the genes from dbNSFP. | [[Blake 2011], [Georgi 2013], and [Liu 2013]] | 
 | [Genes nearest to GWAS peaks](lists/gwascatalog.tsv) | 3,762 | Closest gene 3' and 5' of GWAS hits in the NHGRI GWAS catalog as of Feb 9, 2015 | See instructions [here](http://www.genome.gov/gwastudies/). Cite [[Welter 2014]] and include a web reference to [http://www.genome.gov/gwastudies/](http://www.genome.gov/gwastudies/). |
 
 We welcome pull requests for adding additional lists, provided they are licensed for redistribution. If possible, please provide the source code used to extract the list from its original source, and an appropriate description for this readme.
@@ -42,3 +43,9 @@ We welcome pull requests for adding additional lists, provided they are licensed
 [Hart 2014]: http://www.ncbi.nlm.nih.gov/pubmed/24987113 "Hart T, Brown KR, Sircoulomb F, Rottapel R, Moffat J. Measuring error rates in genomic perturbation screens: gold standards for human functional genomics. Mol Syst Biol. 2014 Jul 1;10:733. doi: 10.15252/msb.20145216. PubMed PMID: 24987113;  PubMed Central PMCID: PMC4299491."
 
 [Welter 2014]: http://www.ncbi.nlm.nih.gov/pubmed/24316577 "Welter D, MacArthur J, Morales J, Burdett T, Hall P, Junkins H, Klemm A, Flicek P, Manolio T, Hindorff L, Parkinson H. The NHGRI GWAS Catalog, a curated resource of SNP-trait associations. Nucleic Acids Res. 2014 Jan;42(Database issue):D1001-6. doi: 10.1093/nar/gkt1229. Epub 2013 Dec 6. PubMed PMID: 24316577; PubMed Central PMCID: PMC3965119."
+
+[Georgi 2013]: http://www.ncbi.nlm.nih.gov/pubmed/23675308 "Georgi B, Voight BF, Bućan M. From mouse to human: evolutionary genomics analysis of human orthologs of essential genes. PLoS Genet. 2013 May;9(5):e1003484. doi: 10.1371/journal.pgen.1003484. Epub 2013 May 9. PubMed PMID: 23675308; PubMed Central PMCID: PMC3649967."
+
+[Blake 2011]: http://www.ncbi.nlm.nih.gov/pubmed/21051359 "Blake JA, Bult CJ, Kadin JA, Richardson JE, Eppig JT; Mouse Genome Database Group. The Mouse Genome Database (MGD): premier model organism resource for mammalian genomics and genetics. Nucleic Acids Res. 2011 Jan;39(Database issue):D842-8. doi: 10.1093/nar/gkq1008. Epub 2010 Nov 3. PubMed PMID: 21051359;  PubMed Central PMCID: PMC3013640."
+
+[Liu 2013]: http://www.ncbi.nlm.nih.gov/pubmed/23843252 "Liu X, Jian X, Boerwinkle E. dbNSFP v2.0: a database of human non-synonymous SNVs and their functional predictions and annotations. Hum Mutat. 2013 Sep;34(9):E2393-402. doi: 10.1002/humu.22376. Epub 2013 Jul 10. PubMed PMID: 23843252; PubMed Central PMCID: PMC4109890."
