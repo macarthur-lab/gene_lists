@@ -19,7 +19,7 @@ Here is a guide to the lists we currently have in this repo:
 | [All dominant genes](lists/all_ad.tsv) | 709 | Currently the union of the Berg and Blekhman dominant lists, may add more lists later. | [[Blekhman 2008], [Berg 2013]] |
 | [All recessive genes](lists/all_ar.tsv) | 1183 | Currently the union of the Berg and Blekhman recessive lists, may add more lists later. | [[Blekhman 2008], [Berg 2013]] |
 | [Essential in culture](lists/core_essentials_hart.tsv) | 285 | Genes deemed essential in multiple cultured cell lines based on shRNA screen data | [[Hart 2014]] |
-| [Genes under GWAS peaks](lists/gwascatalog_9_feb.tsv) | 5156 | Genes under significant GWAS hits in the NHGRI GWAS catalog | See instructions [here](http://www.genome.gov/gwastudies/). Cite [[Welter 2014]] and include a web reference to [http://www.genome.gov/gwastudies/](http://www.genome.gov/gwastudies/). |
+| [Genes nearest to GWAS peaks](lists/gwascatalog_9_feb.tsv) | 5156 | Closest gene 3' and 5' of GWAS hits in the NHGRI GWAS catalog | See instructions [here](http://www.genome.gov/gwastudies/). Cite [[Welter 2014]] and include a web reference to [http://www.genome.gov/gwastudies/](http://www.genome.gov/gwastudies/). |
 
 We welcome pull requests for adding additional lists, provided they are licensed for redistribution. If possible, please provide the source code used to extract the list from its original source, and an appropriate description for this readme.
 
