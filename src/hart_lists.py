@@ -32,7 +32,7 @@ def parse_hart(table_path,hgnc):
 
 if __name__ == '__main__':
     hgnc = parse_hgnc("gene_with_protein_product.txt",mode='update')
-    nelson = parse_hart('hart-supplement-1-core-essentials.txt',hgnc)
+    genes = parse_hart('hart-supplement-1-core-essentials.txt',hgnc)
     with open('lists/core_essentials_hart.tsv',mode='w') as f:
-        print_list(nelson.keys(),f)
+        print_list(genes.keys(),f)
 
