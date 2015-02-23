@@ -18,6 +18,8 @@ Here is a guide to the lists we currently have in this repo:
 | [X-linked dominant genes by Berg et al 2013](lists/berg_xd.tsv) | 34 | OMIM disease genes (as of June 2011) deemed to follow X-linked dominant inheritance according Berg et al, 2013. | [[Berg 2013]] |
 | [All dominant genes](lists/all_ad.tsv) | 709 | Currently the union of the Berg and Blekhman dominant lists, may add more lists later. | [[Blekhman 2008], [Berg 2013]] |
 | [All recessive genes](lists/all_ar.tsv) | 1183 | Currently the union of the Berg and Blekhman recessive lists, may add more lists later. | [[Blekhman 2008], [Berg 2013]] |
+| [Essential in culture](lists/core_essentials_hart.tsv) | 285 | Genes deemed essential in multiple cultured cell lines based on shRNA screen data | [[Hart 2014]] |
+| [Genes under GWAS peaks](lists/gwascatalog_9_feb.tsv) | 5156 | Genes under significant GWAS hits in the NHGRI GWAS catalog | See instructions [here](http://www.genome.gov/gwastudies/). Cite [[Welter 2014]] and include a web reference to [http://www.genome.gov/gwastudies/](http://www.genome.gov/gwastudies/). |
 
 We welcome pull requests for adding additional lists, provided they are licensed for redistribution. If possible, please provide the source code used to extract the list from its original source, and an appropriate description for this readme.
 
@@ -37,4 +39,6 @@ We welcome pull requests for adding additional lists, provided they are licensed
 
 [Russ & Lampel 2005]: http://www.ncbi.nlm.nih.gov/pubmed/16376820 "Russ AP, Lampel S. The druggable genome: an update. Drug Discov Today. 2005 Dec;10(23-24):1607-10. PubMed PMID: 16376820."
 
+[Hart 2014]: http://www.ncbi.nlm.nih.gov/pubmed/24987113 "Hart T, Brown KR, Sircoulomb F, Rottapel R, Moffat J. Measuring error rates in genomic perturbation screens: gold standards for human functional genomics. Mol Syst Biol. 2014 Jul 1;10:733. doi: 10.15252/msb.20145216. PubMed PMID: 24987113;  PubMed Central PMCID: PMC4299491."
 
+[Welter 2014]: http://www.ncbi.nlm.nih.gov/pubmed/24316577 "Welter D, MacArthur J, Morales J, Burdett T, Hall P, Junkins H, Klemm A, Flicek P, Manolio T, Hindorff L, Parkinson H. The NHGRI GWAS Catalog, a curated resource of SNP-trait associations. Nucleic Acids Res. 2014 Jan;42(Database issue):D1001-6. doi: 10.1093/nar/gkt1229. Epub 2013 Dec 6. PubMed PMID: 24316577; PubMed Central PMCID: PMC3965119."
