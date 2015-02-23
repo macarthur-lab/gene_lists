@@ -3,7 +3,7 @@
 from gene_list_utils import *
 
 '''
-Parses the drug target gene list from:
+Parses the list of cell culture essential genes from:
 Hart T, Brown KR, Sircoulomb F, Rottapel R, Moffat J. Measuring error rates 
     in genomic perturbation screens: gold standards for human functional genomics. 
     Mol Syst Biol. 2014 Jul 1;10:733. doi: 10.15252/msb.20145216. 
