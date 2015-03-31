@@ -5,7 +5,6 @@
 
 # Workspace ---------------------------------------------------------------
 require(XML)
-setwd("N:/Translational Cancer Genetics Team/04 Zsofia/24 COGS/007 CONCEPT projects/DNA repair and rare variants/DNA Repair Genes/V3/R")
 
 # Data prep ---------------------------------------------------------------
 WoodRD <- readHTMLTable("http://sciencepark.mdanderson.org/labs/wood/dna_repair_genes.html")
