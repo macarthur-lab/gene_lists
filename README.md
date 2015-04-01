@@ -21,6 +21,9 @@ Here is a guide to the lists we currently have in this repo:
 | [Essential in culture](lists/core_essentials_hart.tsv) | 285 | Genes deemed essential in multiple cultured cell lines based on shRNA screen data | [[Hart 2014]] |
 | [Essential in mice](lists/mgi_essential.tsv) | 2,454 | Genes where homozygous knockout in mice results in pre-, peri- or post-natal lethality. The mouse phenotypes were reported by Jackson Labs [[Blake 2011]], then essential gene list was extracted via manual review of phenotypes by [[Georgi 2013]], and the essential/non-essential flag was put into dbNSFP [[Liu 2013]]. We extracted the genes from dbNSFP. | [[Blake 2011], [Georgi 2013], and [Liu 2013]] | 
 | [Genes nearest to GWAS peaks](lists/gwascatalog.tsv) | 3,762 | Closest gene 3' and 5' of GWAS hits in the NHGRI GWAS catalog as of Feb 9, 2015 | See instructions [here](http://www.genome.gov/gwastudies/). Cite [[Welter 2014]] and include a web reference to [http://www.genome.gov/gwastudies/](http://www.genome.gov/gwastudies/). |
+| [DNA Repair Genes, WoodRD](lists/DRG_WoodRD.tsv) | 178 | An updated inventory of human DNA repair genes. (Last modified on Tuesday 15th April 2014). For details see [src/DRG_WoodRD.R](src/DRG_WoodRD.R) | Cite [[Wood RD 2005]] and include a web reference to [http://sciencepark.mdanderson.org/labs/wood/dna_repair_genes.html](http://sciencepark.mdanderson.org/labs/wood/dna_repair_genes.html). |
+| [DNA Repair Genes, KangJ](lists/DRG_KangJ.tsv) | 151 | Supplementary Table 1. 151 DNA repair genes. DNA repair genes from DNA repair pathways: ATM, BER, FA/HR, MMR, NHEJ, NER, TLS, XLR, RECQ, and other. | Cite [[Kang J 2012]] |
+
 
 We welcome pull requests for adding additional lists, provided they are licensed for redistribution. If possible, please provide the source code used to extract the list from its original source, and an appropriate description for this readme.
 
@@ -49,3 +52,7 @@ We welcome pull requests for adding additional lists, provided they are licensed
 [Blake 2011]: http://www.ncbi.nlm.nih.gov/pubmed/21051359 "Blake JA, Bult CJ, Kadin JA, Richardson JE, Eppig JT; Mouse Genome Database Group. The Mouse Genome Database (MGD): premier model organism resource for mammalian genomics and genetics. Nucleic Acids Res. 2011 Jan;39(Database issue):D842-8. doi: 10.1093/nar/gkq1008. Epub 2010 Nov 3. PubMed PMID: 21051359;  PubMed Central PMCID: PMC3013640."
 
 [Liu 2013]: http://www.ncbi.nlm.nih.gov/pubmed/23843252 "Liu X, Jian X, Boerwinkle E. dbNSFP v2.0: a database of human non-synonymous SNVs and their functional predictions and annotations. Hum Mutat. 2013 Sep;34(9):E2393-402. doi: 10.1002/humu.22376. Epub 2013 Jul 10. PubMed PMID: 23843252; PubMed Central PMCID: PMC4109890."
+
+[Wood RD 2005]: http://www.ncbi.nlm.nih.gov/pubmed/15922366 "Human DNA repair genes, 2005. Wood RD1, Mitchell M, Lindahl T"
+
+[Kang J 2012]: http://www.ncbi.nlm.nih.gov/pubmed/22505474 "A DNA repair pathway-focused score for prediction of outcomes in ovarian cancer treated with platinum-based chemotherapy."
