@@ -53,6 +53,6 @@ We welcome pull requests for adding additional lists, provided they are licensed
 
 [Liu 2013]: http://www.ncbi.nlm.nih.gov/pubmed/23843252 "Liu X, Jian X, Boerwinkle E. dbNSFP v2.0: a database of human non-synonymous SNVs and their functional predictions and annotations. Hum Mutat. 2013 Sep;34(9):E2393-402. doi: 10.1002/humu.22376. Epub 2013 Jul 10. PubMed PMID: 23843252; PubMed Central PMCID: PMC4109890."
 
-[Wood RD 2005]: http://www.ncbi.nlm.nih.gov/pubmed/15922366 "Human DNA repair genes, 2005. Wood RD1, Mitchell M, Lindahl T"
+[Wood 2005]: http://www.ncbi.nlm.nih.gov/pubmed/15922366 "Human DNA repair genes, 2005. Wood RD1, Mitchell M, Lindahl T"
 
-[Kang J 2012]: http://www.ncbi.nlm.nih.gov/pubmed/22505474 "A DNA repair pathway-focused score for prediction of outcomes in ovarian cancer treated with platinum-based chemotherapy."
+[Kang 2012]: http://www.ncbi.nlm.nih.gov/pubmed/22505474 "A DNA repair pathway-focused score for prediction of outcomes in ovarian cancer treated with platinum-based chemotherapy."
