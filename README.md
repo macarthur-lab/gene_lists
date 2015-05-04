@@ -24,6 +24,7 @@ Here is a guide to the lists we currently have in this repo:
 | [DNA Repair Genes, WoodRD](lists/DRG_WoodRD.tsv) | 178 | An updated inventory of human DNA repair genes. (Last modified on Tuesday 15th April 2014). For details see [src/DRG_WoodRD.R](src/DRG_WoodRD.R) | Cite [[Wood 2005]] and include a web reference to [this URL](http://sciencepark.mdanderson.org/labs/wood/dna_repair_genes.html). |
 | [DNA Repair Genes, KangJ](lists/DRG_KangJ.tsv) | 151 | Supplementary Table 1. 151 DNA repair genes. DNA repair genes from DNA repair pathways: ATM, BER, FA/HR, MMR, NHEJ, NER, TLS, XLR, RECQ, and other. | Cite [[Kang 2012]] |
 | [ClinGen haploinsufficient genes](lists/clingen_level3_genes_2015_03_31.tsv) | 221 | Genes with sufficient evidence for dosage pathogenicity (level 3) as determined by the ClinGen Dosage Sensitivity Map as of Feb 27, 2015 | See [ClinGen](http://www.ncbi.nlm.nih.gov/projects/dbvar/clingen/) |
+| [Olfactory receptors](lists/olfactory_receptors.tsv) | 371 | Olfactory receptors from the Mainland 2015's [data release](http://files.figshare.com/1816348/Receptors.tsv) | [Mainland 2015] |
 
 We welcome pull requests for adding additional lists, provided they are licensed for redistribution. If possible, please provide the source code used to extract the list from its original source, and an appropriate description for this readme.
 
@@ -56,3 +57,5 @@ We welcome pull requests for adding additional lists, provided they are licensed
 [Wood 2005]: http://www.ncbi.nlm.nih.gov/pubmed/15922366 "Human DNA repair genes, 2005. Wood RD1, Mitchell M, Lindahl T"
 
 [Kang 2012]: http://www.ncbi.nlm.nih.gov/pubmed/22505474 "A DNA repair pathway-focused score for prediction of outcomes in ovarian cancer treated with platinum-based chemotherapy."
+
+[Mainland 2015]: http://www.nature.com/articles/sdata20152 "Joel D Mainland, Yun R Li, Ting Zhou, Wen Ling L Liu & Hiroaki Matsunami. Human olfactory receptor responses to odorants. Scientific Data 2, Article number: 150002 (2015) ​Received 22 April 2014 Accepted 10 December 2014 Published online 03 February 2015 doi:10.1038/sdata.2015.2"
