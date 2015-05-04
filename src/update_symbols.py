@@ -14,8 +14,7 @@ if __name__ == '__main__':
     current_symbols = set()
     for line in sys.stdin.readlines():
         old_symbol = line.strip()
-        new_symbol = hgnc.get(old_symbol)
-        if new_symbol is not None:
-            current_symbols.add(new_symbol)
+        if old_symbol in hgnc:
+            current_symbols.add(hgnc[old_symbol])
     for symbol in sorted(current_symbols):
         sys.stdout.write(symbol + '\n')
