@@ -25,6 +25,7 @@ Here is a guide to the lists we currently have in this repo:
 | [DNA Repair Genes, KangJ](lists/DRG_KangJ.tsv) | 151 | Supplementary Table 1. 151 DNA repair genes. DNA repair genes from DNA repair pathways: ATM, BER, FA/HR, MMR, NHEJ, NER, TLS, XLR, RECQ, and other. | Cite [[Kang 2012]] |
 | [ClinGen haploinsufficient genes](lists/clingen_level3_genes_2015_03_31.tsv) | 221 | Genes with sufficient evidence for dosage pathogenicity (level 3) as determined by the ClinGen Dosage Sensitivity Map as of Feb 27, 2015 | See [ClinGen](http://www.ncbi.nlm.nih.gov/projects/dbvar/clingen/) |
 | [Olfactory receptors](lists/olfactory_receptors.tsv) | 371 | Olfactory receptors from the Mainland 2015's [data release](http://files.figshare.com/1816348/Receptors.tsv) | [Mainland 2015] |
+| [Genes with any disease association reported in ClinVar](lists/clinvar_path_likelypath.tsv) | 3078 | Using [this simple script](src/clinvar_path_likelypath.tsv), downloaded the ClinVar tab-delimited summary as of May 12, 2015, and took all gene symbols for which there is at least one variant with an assertion of pathogenic or likely pathogenic in ClinVar. | Cite the ClinVar paper [[Landrum 2014]] |
 
 We welcome pull requests for adding additional lists, provided they are licensed for redistribution. If possible, please provide the source code used to extract the list from its original source, and an appropriate description for this readme.
 
@@ -59,3 +60,6 @@ We welcome pull requests for adding additional lists, provided they are licensed
 [Kang 2012]: http://www.ncbi.nlm.nih.gov/pubmed/22505474 "A DNA repair pathway-focused score for prediction of outcomes in ovarian cancer treated with platinum-based chemotherapy."
 
 [Mainland 2015]: http://www.nature.com/articles/sdata20152 "Joel D Mainland, Yun R Li, Ting Zhou, Wen Ling L Liu & Hiroaki Matsunami. Human olfactory receptor responses to odorants. Scientific Data 2, Article number: 150002 (2015) ​Received 22 April 2014 Accepted 10 December 2014 Published online 03 February 2015 doi:10.1038/sdata.2015.2"
+
+[Landrum 2014]: http://www.ncbi.nlm.nih.gov/pubmed/24234437 "Landrum MJ, Lee JM, Riley GR, Jang W, Rubinstein WS, Church DM, Maglott DR. ClinVar: public archive of relationships among sequence variation and human phenotype. Nucleic Acids Res. 2014 Jan;42(Database issue):D980-5. doi: 10.1093/nar/gkt1113. Epub 2013 Nov 14. PubMed PMID: 24234437; PubMed Central PMCID: PMC3965032."
+
