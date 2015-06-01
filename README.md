@@ -26,8 +26,15 @@ Here is a guide to the lists we currently have in this repo:
 | [ClinGen haploinsufficient genes](lists/clingen_level3_genes_2015_02_27.tsv) | 221 | Genes with sufficient evidence for dosage pathogenicity (level 3) as determined by the ClinGen Dosage Sensitivity Map as of Feb 27, 2015 | See [ClinGen](http://www.ncbi.nlm.nih.gov/projects/dbvar/clingen/) |
 | [Olfactory receptors](lists/olfactory_receptors.tsv) | 371 | Olfactory receptors from the Mainland 2015's [data release](http://files.figshare.com/1816348/Receptors.tsv) | [Mainland 2015] |
 | [Genes with any disease association reported in ClinVar](lists/clinvar_path_likelypath.tsv) | 3078 | Using [this simple script](src/clinvar_path_likelypath.tsv), downloaded the ClinVar tab-delimited summary as of May 12, 2015, and took all gene symbols for which there is at least one variant with an assertion of pathogenic or likely pathogenic in ClinVar. | Cite the ClinVar paper [[Landrum 2014]] |
+| [Kinases](lists/kinases.tsv) | 351 | From UniProt's [pkinfam list](http://www.uniprot.org/docs/pkinfam) | [According to UniProt](http://www.uniprot.org/docs/pkinfam) this list is based on 3 publications: [[Hunter 2000], [Manning 2002], [Miranda-Saavedra & Barton 2007]] |
 
 We welcome pull requests for adding additional lists, provided they are licensed for redistribution. If possible, please provide the source code used to extract the list from its original source, and an appropriate description for this readme.
+
+[Miranda-Saavedra & Barton 2007]: http://www.ncbi.nlm.nih.gov/pubmed/17557329 "Miranda-Saavedra D, Barton GJ. Classification and functional annotation of eukaryotic protein kinases. Proteins. 2007 Sep 1;68(4):893-914. PubMed PMID: 17557329."
+
+[Manning 2002]: http://www.ncbi.nlm.nih.gov/pubmed/12471243 "Manning G, Whyte DB, Martinez R, Hunter T, Sudarsanam S. The protein kinase complement of the human genome. Science. 2002 Dec 6;298(5600):1912-34. Review. PubMed PMID: 12471243."
+
+[Hunter 2000]: http://www.ncbi.nlm.nih.gov/pubmed/10647936 "Hunter T. Signaling--2000 and beyond. Cell. 2000 Jan 7;100(1):113-27. Review.  PubMed PMID: 10647936."
 
 [Law 2014]: http://www.ncbi.nlm.nih.gov/pubmed/24203711 "Law V, Knox C, Djoumbou Y, Jewison T, Guo AC, Liu Y, Maciejewski A, Arndt D, Wilson M, Neveu V, Tang A, Gabriel G, Ly C, Adamjee S, Dame ZT, Han B, Zhou Y, Wishart DS. DrugBank 4.0: shedding new light on drug metabolism. Nucleic Acids Res. 2014 Jan;42(Database issue):D1091-7. doi: 10.1093/nar/gkt1068. Epub 2013 Nov 6. PubMed PMID: 24203711; PubMed Central PMCID: PMC3965102."
 
