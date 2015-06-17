@@ -19,26 +19,38 @@ def simplify_gene_list(genes, thesaurus):
 	new = set()
 	for gene in genes:
 		try:
-			new.add(thesaurus[gene])
+			synonyms = thesaurus[gene]
+			n = len(synonyms)
+			if n == 1:
+				new.add(synonyms[0])
+			else:
+				# if a certain symbol maps to multiple "approved" synonyms, 
+				# pick the first one different from the symbol itself
+				for syn in synonyms:
+					if syn != gene:
+						new.add(syn)
+						break
 		except KeyError:
-			pass
-	if len(new) == 0:
-		return ','.join(genes)
-	else:
-		return ','.join(new)
+			new.add(gene)
+
+	return ','.join(new)
 
 
+# returns mapping from gene symbol to list of synonymous, approved gene symbols 
+# ideally, there should only be one approved synonym for any given symbol, but the file has lines where
+# a non-approved symbol will appear in the approved column and thus will be mapped to itself
+# e.g. FRAXA NA
 def get_gene_thesaurus(filename):
-	thesaurus = {}
+	thesaurus = defaultdict(list)
 	with open(filename, 'r') as lines:
 		for line in lines:
 			line = line.strip().split("\t")
 			approved = line[0]
-			synonyms = line[1]
-			thesaurus[approved] = approved
+			synonyms = line[1].split(",")
+			thesaurus[approved].append(approved)
 			if synonyms != "NA":
 				for word in synonyms:
-					thesaurus[word] = approved
+					thesaurus[word].append(approved)
 	return thesaurus
 
 
