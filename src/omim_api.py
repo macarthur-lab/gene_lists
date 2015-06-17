@@ -22,7 +22,10 @@ def simplify_gene_list(genes, thesaurus):
 			new.add(thesaurus[gene])
 		except KeyError:
 			pass
-	return ','.join(new)
+	if len(new) == 0:
+		return ','.join(genes)
+	else:
+		return ','.join(new)
 
 
 def get_gene_thesaurus(filename):
