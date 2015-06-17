@@ -9,21 +9,34 @@ import urllib2
 import re
 import json
 import argparse
-import subprocess as sp
 import sys
+from collections import defaultdict
 from gene_list_utils import *
 
 
-def simplify_gene_list(genes):
+def simplify_gene_list(genes, thesaurus):
 	genes = re.sub(' ', '', genes).split(',')
-	proc = sp.Popen(['src/update_symbols.py', '--hgnc', 'other_data/gene_with_protein_product.txt'], stdin=sp.PIPE, stdout=sp.PIPE, stderr=sp.PIPE)
-	out, err = proc.communicate(input='\n'.join(genes))
-	if out == '':
-		# print ','.join(genes)
-		return ','.join(genes)
-	else:
-		out = out.strip().split('\n')
-		return ','.join(out)
+	new = set()
+	for gene in genes:
+		try:
+			new.add(thesaurus[gene])
+		except KeyError:
+			pass
+	return ','.join(new)
+
+
+def get_gene_thesaurus(filename):
+	thesaurus = {}
+	with open(filename, 'r') as lines:
+		for line in lines:
+			line = line.strip().split("\t")
+			approved = line[0]
+			synonyms = line[1]
+			thesaurus[approved] = approved
+			if synonyms != "NA":
+				for word in synonyms:
+					thesaurus[word] = approved
+	return thesaurus
 
 
 def main(args):
@@ -45,6 +58,8 @@ def main(args):
 	header = ['phenotype', 'phenotypeInheritance', 'phenotypeMimNumber', 'chromosome', 'gene', 'geneMimNumber', 'comments']
 	o.write('\t'.join(header) + '\n')
 	header = dict(zip(header, range(len(header))))
+
+	t = get_gene_thesaurus(args.hgnc)
 
 	while True:
 		url = 'http://api.omim.org/api/geneMap'
@@ -76,7 +91,7 @@ def main(args):
 			geneMap = g['geneMap']
 			
 			line = ['']*len(header.keys())
-			genes = simplify_gene_list(geneMap['geneSymbols'])
+			genes = simplify_gene_list(geneMap['geneSymbols'], t)
 			line[header['gene']] = genes
 			line[header['chromosome']] = geneMap['chromosomeSymbol']
 			line[header['geneMimNumber']] = geneMap['mimNumber']
@@ -116,6 +131,7 @@ def main(args):
 
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
+	parser.add_argument('--hgnc', dest='hgnc', help='Path to gene thesaurus file.')
 	parser.add_argument('--output', dest='output', default=sys.stdout)
 	args = parser.parse_args()
 	main(args)
