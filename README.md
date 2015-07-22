@@ -28,8 +28,11 @@ Here is a guide to the lists we currently have in this repo:
 | [Genes with any disease association reported in ClinVar](lists/clinvar_path_likelypath.tsv) | 3078 | Using [this simple script](src/clinvar_path_likelypath.tsv), downloaded the ClinVar tab-delimited summary as of May 12, 2015, and took all gene symbols for which there is at least one variant with an assertion of pathogenic or likely pathogenic in ClinVar. | Cite the ClinVar paper [[Landrum 2014]] |
 | [Kinases](lists/kinases.tsv) | 351 | From UniProt's [pkinfam list](http://www.uniprot.org/docs/pkinfam) | [According to UniProt](http://www.uniprot.org/docs/pkinfam) this list is based on 3 publications: [[Hunter 2000], [Manning 2002], [Miranda-Saavedra & Barton 2007]] |
 | [GPCRs](lists/gpcr.tsv) | 1705 | GPCR list from [guidetopharmacology.org](http://www.guidetopharmacology.org/GRAC/GPCRListForward?class=A) | Please read citing instructions [here](http://www.guidetopharmacology.org/citing.jsp) and at a minimum, cite [[Pawson 2014]]. |
+| [Natural product targets](lists/natural_product_targets.tsv) | 37 | List of hand-curated targets of natural products from supplement of [[Dancik 2010]] | [[Dancik 2010]] |
 
 We welcome pull requests for adding additional lists, provided they are licensed for redistribution. If possible, please provide the source code used to extract the list from its original source, and an appropriate description for this readme.
+
+[Dancik 2010]: http://www.ncbi.nlm.nih.gov/pubmed/20565092 "Dancík V, Seiler KP, Young DW, Schreiber SL, Clemons PA. Distinct biological network properties between the targets of natural products and disease genes. J Am Chem Soc. 2010 Jul 14;132(27):9259-61. doi: 10.1021/ja102798t. PubMed PMID: 20565092; PubMed Central PMCID: PMC2898216."
 
 [Pawson 2014]: http://www.ncbi.nlm.nih.gov/pubmed/24234439 "Pawson AJ, Sharman JL, Benson HE, Faccenda E, Alexander SP, Buneman OP, Davenport AP, McGrath JC, Peters JA, Southan C, Spedding M, Yu W, Harmar AJ; NC-IUPHAR. The IUPHAR/BPS Guide to PHARMACOLOGY: an expert-driven knowledgebase of drug targets and their ligands. Nucleic Acids Res. 2014 Jan;42(Database issue):D1098-106. doi: 10.1093/nar/gkt1143. Epub 2013 Nov 14. PubMed PMID: 24234439; PubMed Central PMCID: PMC3965070."
 
