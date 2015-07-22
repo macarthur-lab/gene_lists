@@ -27,7 +27,7 @@ Here is a guide to the lists we currently have in this repo:
 | [Olfactory receptors](lists/olfactory_receptors.tsv) | 371 | Olfactory receptors from the Mainland 2015's [data release](http://files.figshare.com/1816348/Receptors.tsv) | [Mainland 2015] |
 | [Genes with any disease association reported in ClinVar](lists/clinvar_path_likelypath.tsv) | 3078 | Using [this simple script](src/clinvar_path_likelypath.tsv), downloaded the ClinVar tab-delimited summary as of May 12, 2015, and took all gene symbols for which there is at least one variant with an assertion of pathogenic or likely pathogenic in ClinVar. | Cite the ClinVar paper [[Landrum 2014]] |
 | [Kinases](lists/kinases.tsv) | 351 | From UniProt's [pkinfam list](http://www.uniprot.org/docs/pkinfam) | [According to UniProt](http://www.uniprot.org/docs/pkinfam) this list is based on 3 publications: [[Hunter 2000], [Manning 2002], [Miranda-Saavedra & Barton 2007]] |
-| [GPCRs](lists/gpcr.tsv) | 1705 | GPCR list from [guidetopharmacology.org](http://www.guidetopharmacology.org/GRAC/GPCRListForward?class=A) | Please read citing instructions[here](http://www.guidetopharmacology.org/citing.jsp) and at a minimum, cite [[Pawson 2014]]. |
+| [GPCRs](lists/gpcr.tsv) | 1705 | GPCR list from [guidetopharmacology.org](http://www.guidetopharmacology.org/GRAC/GPCRListForward?class=A) | Please read citing instructions [here](http://www.guidetopharmacology.org/citing.jsp) and at a minimum, cite [[Pawson 2014]]. |
 
 We welcome pull requests for adding additional lists, provided they are licensed for redistribution. If possible, please provide the source code used to extract the list from its original source, and an appropriate description for this readme.
 
