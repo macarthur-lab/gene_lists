@@ -35,11 +35,12 @@ def simplify_gene_list(genes, thesaurus):
 
 	return ','.join(new)
 
-
-# returns mapping from gene symbol to list of synonymous, approved gene symbols 
-# ideally, there should only be one approved synonym for any given symbol, but the file has lines where
-# a non-approved symbol will appear in the approved column and thus will be mapped to itself
-# e.g. FRAXA NA
+"""
+Returns mapping from gene symbol to list of synonymous, approved gene symbols 
+ideally, there should only be one approved synonym for any given symbol, but the file has lines where
+a non-approved symbol will appear in the approved column and thus will be mapped to itself
+e.g. FRAXA NA
+"""
 def get_gene_thesaurus(filename):
 	thesaurus = defaultdict(list)
 	with open(filename, 'r') as lines:
@@ -68,14 +69,15 @@ def main(args):
 	if args.output == sys.stdout:
 		o = sys.stdout
 	else:
-		o = open(args.output, 'a')
+		o = open(args.output, 'w')
 
 	header = ['phenotype', 'phenotypeInheritance', 'phenotypeMimNumber', 'chromosome', 'gene', 'geneMimNumber', 'comments']
 	o.write('\t'.join(header) + '\n')
 	header = dict(zip(header, range(len(header))))
 
 	t = get_gene_thesaurus(args.hgnc)
-
+	sys.stdout.write("\rOn chromosome %s .." % request_data['chromosome'])
+	sys.stdout.flush()
 	while True:
 		url = 'http://api.omim.org/api/geneMap'
 		# add parameters to url string
@@ -93,7 +95,8 @@ def main(args):
 			# try moving to next chromosome
 			try:
 				request_data['chromosome'] = chromosomes.next()
-				print request_data['chromosome']
+				sys.stdout.write("\rOn chromosome %s .." % request_data['chromosome'])
+				sys.stdout.flush()
 			# if no chromosomes are left, break out of loop .. we're done here
 			except StopIteration:
 				break
