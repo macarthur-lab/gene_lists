@@ -18,19 +18,15 @@ def simplify_gene_list(genes, thesaurus):
 	genes = re.sub(' ', '', genes).split(',')
 	new = set()
 	for gene in genes:
-		try:
+		if gene in thesaurus:
 			synonyms = thesaurus[gene]
-			n = len(synonyms)
-			if n == 1:
-				new.add(synonyms[0])
+			if len(synonyms) > 1:
+				# if a certain symbol maps to multiple "approved" synonyms, pick the first one different from the symbol itself
+				syn = filter(lambda x: x != gene, synonyms)[0]
+				new.add(syn)
 			else:
-				# if a certain symbol maps to multiple "approved" synonyms, 
-				# pick the first one different from the symbol itself
-				for syn in synonyms:
-					if syn != gene:
-						new.add(syn)
-						break
-		except KeyError:
+				new.add(synonyms[0])
+		else:
 			new.add(gene)
 
 	return ','.join(new)
@@ -56,7 +52,10 @@ def get_gene_thesaurus(filename):
 
 
 def main(args):
-	chromosomes = (x for x in range(1,23) + ['X', 'Y'])
+	if args.chrom:
+		chromosomes = [args.chrom]
+	else:
+		chromosomes = (x for x in range(1,23) + ['X', 'Y'])
 	
 	# set parameters for HTTP request
 	request_data = {}
@@ -75,7 +74,8 @@ def main(args):
 	o.write('\t'.join(header) + '\n')
 	header = dict(zip(header, range(len(header))))
 
-	t = get_gene_thesaurus(args.hgnc)
+	if args.simplify_genes:
+		t = get_gene_thesaurus(args.hgnc)
 	sys.stdout.write("\rOn chromosome %s .." % request_data['chromosome'])
 	sys.stdout.flush()
 	while True:
@@ -109,7 +109,10 @@ def main(args):
 			geneMap = g['geneMap']
 			
 			line = ['']*len(header.keys())
-			genes = simplify_gene_list(geneMap['geneSymbols'], t)
+			if args.simplify_genes:
+				genes = simplify_gene_list(geneMap['geneSymbols'], t)
+			else:
+				genes = re.sub(' ', '', geneMap['geneSymbols'])
 			line[header['gene']] = genes
 			line[header['chromosome']] = geneMap['chromosomeSymbol']
 			line[header['geneMimNumber']] = geneMap['mimNumber']
@@ -149,9 +152,14 @@ def main(args):
 
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
+	parser.add_argument('--simplify_genes', action='store_true')
 	parser.add_argument('--hgnc', dest='hgnc', help='Path to gene thesaurus file.')
 	parser.add_argument('--output', dest='output', default=sys.stdout)
+	parser.add_argument('--chrom', help='Only get data for given chromosome.')
 	args = parser.parse_args()
+	if args.simplify_genes and not args.hgnc:
+		parser.error('If --simplify_genes is set, then you need to provide a gene thesaurus via --hgnc option.')
+
 	main(args)
 
 
