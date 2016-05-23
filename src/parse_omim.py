@@ -42,7 +42,7 @@ def main(args):
 	
 	# set parameters for HTTP request
 	request_data = {}
-	request_data['apiKey'] = 'FE4125A4A6027ABC7E12CF006248ABDF86083EB6'
+	request_data['apiKey'] = 'tjqbNLkIQOOiXFd2ctwLGw'
 	request_data['format'] = 'json'
 	request_data['chromosome'] = chromosomes.next()
 	request_data['limit'] = 100
@@ -59,7 +59,7 @@ def main(args):
 	header = dict(zip(header, range(len(header))))
 
 	t = get_gene_thesaurus(args.hgnc)
-	sys.stdout.write("\rOn chromosome %s .." % request_data['chromosome'])
+	sys.stdout.write("\rOn chromosome %s .. " % request_data['chromosome'])
 	sys.stdout.flush()
 	while True:
 		url = 'http://api.omim.org/api/geneMap'
@@ -67,7 +67,10 @@ def main(args):
 		url_values = urllib.urlencode(request_data)
 		url = url + '?' + url_values
 		# query OMIM 
-		response = urllib2.urlopen(url)
+		try:
+			response = urllib2.urlopen(url)
+		except urllib2.HTTPError:
+			raise SystemExit, "Failed to access OMIM API, may be time to register for a new key"
 		# read in response
 		result = json.loads(response.read())		
 		geneMapList = result['omim']['listResponse']['geneMapList']
