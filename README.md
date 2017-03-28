@@ -30,6 +30,8 @@ Here is a guide to the lists we currently have in this repo:
 | [Kinases](lists/kinases.tsv) | 351 | From UniProt's [pkinfam list](http://www.uniprot.org/docs/pkinfam) | [According to UniProt](http://www.uniprot.org/docs/pkinfam) this list is based on 3 publications: [[Hunter 2000], [Manning 2002], [Miranda-Saavedra & Barton 2007]] |
 | [GPCRs](lists/gpcr.tsv) | 1705 | GPCR list from [guidetopharmacology.org](http://www.guidetopharmacology.org/GRAC/GPCRListForward?class=A) | Please read citing instructions [here](http://www.guidetopharmacology.org/citing.jsp) and at a minimum, cite [[Pawson 2014]]. |
 | [Natural product targets](lists/natural_product_targets.tsv) | 37 | List of hand-curated targets of natural products from supplement of [[Dancik 2010]] | [[Dancik 2010]] |
+| [BROCA - Cancer Risk Panel](lists/BROCA_Cancer_Risk_Panel.tsv) | 66 | BROCA is useful for the evaluation of patients with a suspected hereditary cancer predisposition, with a focus on syndromes that include breast or ovarian cancer as one of the cancer types. Depending on the causative gene involved, these cancers may co-occur with other cancer types (such as colorectal, endometrial, pancreatic, endocrine, or melanoma). | [University of Washington](http://depts.washington.edu/labweb/Divisions/MolDiag/MolDiagGen/index.htm)
+
 
 We welcome pull requests for adding additional lists, provided they are licensed for redistribution. If possible, please provide the source code used to extract the list from its original source, and an appropriate description for this readme.
 
