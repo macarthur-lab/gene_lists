@@ -30,6 +30,7 @@ Here is a guide to the lists we currently have in this repo:
 | [Kinases](lists/kinases.tsv) | 351 | From UniProt's [pkinfam list](http://www.uniprot.org/docs/pkinfam) | [According to UniProt](http://www.uniprot.org/docs/pkinfam) this list is based on 3 publications: [[Hunter 2000], [Manning 2002], [Miranda-Saavedra & Barton 2007]] |
 | [GPCRs](lists/gpcr.tsv) | 1705 | GPCR list from [guidetopharmacology.org](http://www.guidetopharmacology.org/GRAC/GPCRListForward?class=A) | Please read citing instructions [here](http://www.guidetopharmacology.org/citing.jsp) and at a minimum, cite [[Pawson 2014]]. |
 | [Natural product targets](lists/natural_product_targets.tsv) | 37 | List of hand-curated targets of natural products from supplement of [[Dancik 2010]] | [[Dancik 2010]] |
+| [GPI-anchored proteins](lists/gpi_anchored.tsv) | 135 | Gene symbols encoding proteins [annotated by UniProt](https://www.uniprot.org/uniprot/?query=keyword:%22GPI-anchor%20[KW-0336]%22&fil=organism%3A%22Homo+sapiens+%28Human%29+%5B9606%5D%22) as being GPI-anchored. | Cite the latest UniProt paper: [[UniProt Consortium 2017]] |
 
 We welcome pull requests for adding additional lists, provided they are licensed for redistribution. If possible, please provide the source code used to extract the list from its original source, and an appropriate description for this readme.
 
@@ -77,3 +78,4 @@ We welcome pull requests for adding additional lists, provided they are licensed
 
 [Landrum 2014]: http://www.ncbi.nlm.nih.gov/pubmed/24234437 "Landrum MJ, Lee JM, Riley GR, Jang W, Rubinstein WS, Church DM, Maglott DR. ClinVar: public archive of relationships among sequence variation and human phenotype. Nucleic Acids Res. 2014 Jan;42(Database issue):D980-5. doi: 10.1093/nar/gkt1113. Epub 2013 Nov 14. PubMed PMID: 24234437; PubMed Central PMCID: PMC3965032."
 
+[UniProt Consortium 2017]: https://www.ncbi.nlm.nih.gov/pubmed/27899622 "The UniProt Consortium. UniProt: the universal protein knowledgebase. Nucleic Acids Res. 2017 Jan 4;45(D1):D158-D169. doi: 10.1093/nar/gkw1099. Epub 2016 Nov 29. PubMed PMID: 27899622; PubMed Central PMCID: PMC5210571."
