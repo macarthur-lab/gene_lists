@@ -80,8 +80,8 @@ We welcome pull requests for adding additional lists, provided they are licensed
 
 [Landrum 2014]: http://www.ncbi.nlm.nih.gov/pubmed/24234437 "Landrum MJ, Lee JM, Riley GR, Jang W, Rubinstein WS, Church DM, Maglott DR. ClinVar: public archive of relationships among sequence variation and human phenotype. Nucleic Acids Res. 2014 Jan;42(Database issue):D980-5. doi: 10.1093/nar/gkt1113. Epub 2013 Nov 14. PubMed PMID: 24234437; PubMed Central PMCID: PMC3965032."
 
-<<<<<<< HEAD
+
 [UniProt Consortium 2017]: https://www.ncbi.nlm.nih.gov/pubmed/27899622 "The UniProt Consortium. UniProt: the universal protein knowledgebase. Nucleic Acids Res. 2017 Jan 4;45(D1):D158-D169. doi: 10.1093/nar/gkw1099. Epub 2016 Nov 29. PubMed PMID: 27899622; PubMed Central PMCID: PMC5210571."
-=======
+
 [Kalia 2017]: https://www.ncbi.nlm.nih.gov/pubmed/27854360 "Kalia SS, Adelman K2, Bale SJ, Chung WK, Eng C, Evans JP, Herman GE, Hufnagel SB, Klein TE, Korf BR, McKelvey KD, Ormond KE, Richards CS, Vlangos CN, Watson M, Martin CL, Miller DT; Recommendations for reporting of secondary findings in clinical exome and genome sequencing, 2016 update (ACMG SF v2.0): a policy statement of the American College of Medical Genetics and Genomics. Genet Med. 2017 Feb;19(2):249-255. doi: 10.1038/gim.2016.190. Epub 2016 Nov 17."
->>>>>>> 34b59cb702a0757ccbab2b2d320428755de6eb5e
+
