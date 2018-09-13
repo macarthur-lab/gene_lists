@@ -69,13 +69,13 @@ def parse_hgnc(hgnc_path, mode='id'):
         for line in hgnc_file.readlines():
             cols = line.split('\t')
             if mode == 'id':
-                hgnc_id = cols[colnames.index('HGNC ID')]
+                hgnc_id = cols[colnames.index('hgnc_id')]
                 hgnc[hgnc_id] = dict(zip(colnames,line.split('\t')))
             if mode == 'update':
-                all_possible_names_and_symbols = map(str.strip,cols[colnames.index('Previous Symbols')].split(',') + 
-                    cols[colnames.index('Approved Symbol')].split(',') + 
-                    cols[colnames.index('Synonyms')].split(','))
+                all_possible_names_and_symbols = map(str.strip,cols[colnames.index('prev_symbol')].split(',') + 
+                    cols[colnames.index('symbol')].split(',') + 
+                    cols[colnames.index('alias_symbol')].strip('"').split('|'))
                 for symbol in all_possible_names_and_symbols:
                     if symbol != '': # skip blanks
-                        hgnc[symbol] = cols[colnames.index('Approved Symbol')]
+                        hgnc[symbol] = cols[colnames.index('symbol')]
     return hgnc
