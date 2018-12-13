@@ -21,6 +21,8 @@ Here is a guide to the lists we currently have in this repo:
 | [All recessive genes](lists/all_ar.tsv) | 1183 | Currently the union of the Berg and Blekhman recessive lists, may add more lists later. | [[Blekhman 2008], [Berg 2013]] |
 | [Homozygous LoF tolerant](lists/homozygous_lof_tolerant_twohit.tsv) | 330 | Genes with at least two different high-confidence LoF variants found in a homozygous state in at least one individual in ExAC. By Konrad Karczewski. | Just cite the ExAC paper [[Lek 2016]] |
 | [Essential in culture](lists/core_essentials_hart.tsv) | 283 | Genes deemed essential in multiple cultured cell lines based on shRNA screen data | [[Hart 2014]] |
+| [Essential in culture (CRISPR screening)](lists/CEGv2_subset_universe.tsv) | 683 | Genes deemed essential in multiple cultured cell lines based on CRISPR/Cas screen data | [[Hart 2017]] |
+| [Non-essential in culture (CRISPR screening)](lists/NEGv1_subset_universe.tsv) | 913 | Genes deemed non-essential in multiple cultured cell lines based on CRISPR/Cas screen data | [[Hart 2017]] |
 | [Essential in mice](lists/mgi_essential.tsv) | 2,454 | Genes where homozygous knockout in mice results in pre-, peri- or post-natal lethality. The mouse phenotypes were reported by Jackson Labs [[Blake 2011]], then essential gene list was extracted via manual review of phenotypes by [[Georgi 2013]], and the essential/non-essential flag was put into dbNSFP [[Liu 2013]]. We extracted the genes from dbNSFP. | [[Blake 2011], [Georgi 2013], and [Liu 2013]] |
 | [Genes nearest to GWAS peaks](lists/gwascatalog.tsv) | 6,336 | Closest gene to GWAS hits  with *P* < 5-e8 in the NHGRI GWAS catalog (MAPPED_GENE column) as of Sep 13, 2018 | [[MacArthur 2017]] |
 | [DNA Repair Genes, WoodRD](lists/DRG_WoodRD.tsv) | 178 | An updated inventory of human DNA repair genes. (Last modified on Tuesday 15th April 2014). For details see [src/DRG_WoodRD.R](src/DRG_WoodRD.R) | Cite [[Wood 2005]] and include a web reference to [this URL](http://sciencepark.mdanderson.org/labs/wood/dna_repair_genes.html). |
@@ -66,6 +68,9 @@ We welcome pull requests for adding additional lists, provided they are licensed
 [Russ & Lampel 2005]: http://www.ncbi.nlm.nih.gov/pubmed/16376820 "Russ AP, Lampel S. The druggable genome: an update. Drug Discov Today. 2005 Dec;10(23-24):1607-10. PubMed PMID: 16376820."
 
 [Hart 2014]: http://www.ncbi.nlm.nih.gov/pubmed/24987113 "Hart T, Brown KR, Sircoulomb F, Rottapel R, Moffat J. Measuring error rates in genomic perturbation screens: gold standards for human functional genomics. Mol Syst Biol. 2014 Jul 1;10:733. doi: 10.15252/msb.20145216. PubMed PMID: 24987113;  PubMed Central PMCID: PMC4299491."
+
+[Hart 2017]: http://www.g3journal.org/content/7/8/2719 "HART, Traver, et al. Evaluation and design of genome-wide CRISPR/SpCas9 knockout screens. G3: Genes, Genomes, Genetics, 2017, g3. 117.041277. doi: 10.1534/g3.117.041277. PMID: 28655737 PMCID: PMC5555476"
+
 
 [Welter 2014]: http://www.ncbi.nlm.nih.gov/pubmed/24316577 "Welter D, MacArthur J, Morales J, Burdett T, Hall P, Junkins H, Klemm A, Flicek P, Manolio T, Hindorff L, Parkinson H. The NHGRI GWAS Catalog, a curated resource of SNP-trait associations. Nucleic Acids Res. 2014 Jan;42(Database issue):D1001-6. doi: 10.1093/nar/gkt1229. Epub 2013 Dec 6. PubMed PMID: 24316577; PubMed Central PMCID: PMC3965119."
 
